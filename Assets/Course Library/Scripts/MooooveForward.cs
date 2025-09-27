@@ -3,6 +3,8 @@ using UnityEngine;
 public class MooooveForward : MonoBehaviour
 {
     public float speed = 40.0f;
+    private float topBound = 30;
+    private float lowerBound = -15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,5 +15,16 @@ public class MooooveForward : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
-    }
+
+        if (transform.position.z > topBound)
+        {
+           Destroy(gameObject); 
+        }
+        else if (transform.position.z < lowerBound)
+        {
+            Destroy(gameObject);
+        }
+    }   
 }
+        
+
