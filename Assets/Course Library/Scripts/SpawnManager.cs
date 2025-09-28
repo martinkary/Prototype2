@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {   public GameObject[] spawnPrefabs;
-    private float xRange = 25.0f;
+    private float xRange = 15.0f;
     private float startDelay = 2.5f;
     private float spawnInterval = 2.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
